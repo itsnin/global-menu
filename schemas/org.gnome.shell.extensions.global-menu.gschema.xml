@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.global-menu" path="/org/gnome/shell/extensions/global-menu/">
+    <!-- how long extension.js waits, in ms, after a focus change before it starts a fresh
+         menu lookup. focus can flap a few times during window-switch animations, so we
+         debounce instead of rebuilding on every intermediate event -->
+    <key name="focus-debounce-ms" type="i">
+      <range min="0" max="500"/>
+      <default>50</default>
+      <summary>Focus change debounce</summary>
+      <description>Milliseconds to wait after a focus change before rebuilding the menu</description>
+    </key>
+    <!-- apps whose menu we never show, even if they'd otherwise register with us or match
+         a normal window. matched against the focused window's wm class, case-insensitive,
+         exact match only - no globbing or regex, so a typo here fails closed (item just
+         never matches) instead of matching something the user didn't mean -->
+    <key name="app-blocklist" type="as">
+      <default>[]</default>
+      <summary>Blocked applications</summary>
+      <description>WM class names to never show the menu bar for</description>
+    </key>
+  </schema>
+</schemalist>

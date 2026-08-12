@@ -1,0 +1,10 @@
+{
+    "uuid": "global-menu@nin",
+    "name": "Global Menu",
+    "description": "A macOS-style global menu bar for GNOME. Shows File, Edit, View, Window, and other menus for the focused app when it exposes them, with a small generic fallback when it doesn't. Wayland only.",
+    "shell-version": ["45", "46", "47", "48", "49", "50"],
+    "url": "https://github.com/itsnin/global-menu",
+    "gettext-domain": "global-menu@nin",
+    "settings-schema": "org.gnome.shell.extensions.global-menu",
+    "version-name": "2026.08.10"
+}
